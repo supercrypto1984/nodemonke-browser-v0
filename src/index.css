@@ -1,0 +1,70 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.monkes-container {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 移除以下样式，因为它们已经在 MonkesList.css 中定义 */
+/* .monkes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.monkes-table th,
+.monkes-table td {
+  padding: 10px;
+  border: 1px solid #333;
+  text-align: left;
+}
+
+.monkes-table th {
+  background-color: #2a2a2a;
+}
+
+.monke-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.color-analysis {
+  width: 20px;
+  height: 100px;
+  background: linear-gradient(to bottom, #ff0000, #00ff00, #0000ff);
+}
+
+.trait {
+  margin-bottom: 5px;
+}
+
+.trait:last-child {
+  margin-bottom: 0;
+} */
+
+/* 添加一些全局实用类 */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+

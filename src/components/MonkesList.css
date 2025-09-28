@@ -1,0 +1,273 @@
+.monkes-container {
+  padding: 10px;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h2 { 
+  font-size: 28px; 
+  margin: 10px 0;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.table-container {
+  background: #2D2D2D;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  table-layout: fixed;
+}
+
+th, td { 
+  border: 1px solid #3D3D3D; 
+  text-align: left;
+  vertical-align: top;
+  background: #2D2D2D;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px;
+}
+
+/* 设置表头行高 */
+thead tr {
+  height: 40px !important; /* 降低表头高度 */
+}
+
+/* 设置内容行高 */
+tbody tr { 
+  height: 60px;
+}
+
+/* 移除图片单元格的内边距并设置为正方形 */
+td:nth-child(2) {
+  padding: 0;
+  width: 180px;
+  height: 180px;
+}
+
+th { 
+  background: #3D3D3D; 
+  position: sticky;
+  top: 0;
+  font-weight: 600;
+  z-index: 1;
+  font-size: 18px;
+  white-space: nowrap;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  padding: 0 12px;
+}
+
+/* Column widths */
+th:nth-child(1), td:nth-child(1) { width: 50px; }
+th:nth-child(2), td:nth-child(2) { 
+  width: 180px; 
+  padding: 0; 
+}
+th:nth-child(3), td:nth-child(3) { width: 50px; } 
+th:nth-child(4), td:nth-child(4) { width: 200px; } 
+th:nth-child(5), td:nth-child(5) { width: 60px; }
+th:nth-child(6), td:nth-child(6) { width: 100px; }
+th:nth-child(7), td:nth-child(7) { width: 100px; }
+th:nth-child(8), td:nth-child(8) { width: 200px; }
+
+.color-bar { 
+  width: 30px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.color-segment {
+  width: 100%;
+  flex: 1;
+}
+
+.monke-image {
+  width: 180px;
+  height: 180px;
+  image-rendering: pixelated;
+  display: block;
+  border-radius: 4px;
+  background-color: rgb(151, 123, 182);
+}
+
+.script-pubkey {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background: #3D3D3D;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.traits-list {
+  display: flex;
+  flex-direction: column; 
+  gap: 4px;
+}
+
+.trait-item {
+  background: #3D3D3D;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: monospace;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.trait-item.rare {
+  color: #ff4444; 
+  font-weight: 600;
+}
+
+.monke-image.error {
+  display: none;
+}
+
+td:nth-child(5),
+td:nth-child(6),
+td:nth-child(7) {
+  font-family: monospace;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.color-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.color-count {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #FFFFFF;
+}
+
+.color-cell {
+  text-align: center;
+  padding: 4px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.error {
+  color: #ff4444;
+}
+
+.monke-image-cell {
+  width: 180px;
+  height: 180px;
+}
+
+/* 移动设备自适应布局 */
+@media screen and (max-width: 768px) {
+  .monkes-container {
+    padding: 5px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .table-container {
+    padding: 5px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+
+  /* 隐藏某些列以适应小屏幕 */
+  th:nth-child(3), td:nth-child(3),
+  th:nth-child(5), td:nth-child(5),
+  th:nth-child(7), td:nth-child(7),
+  th:nth-child(8), td:nth-child(8) {
+    display: none;
+  }
+
+  /* 调整剩余列的宽度 */
+  th:nth-child(1), td:nth-child(1) { width: 40px; }
+  th:nth-child(2), td:nth-child(2) { 
+    width: 100px; 
+    height: 100px;
+  }
+  th:nth-child(4), td:nth-child(4) { width: 120px; }
+  th:nth-child(6), td:nth-child(6) { width: 80px; }
+
+  .monke-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .monke-image-cell {
+    width: 100px;
+    height: 100px;
+  }
+
+  .color-bar {
+    width: 20px;
+    height: 80px;
+  }
+
+  .trait-item {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .script-pubkey {
+    font-size: 12px;
+  }
+}
+
+/* 更小屏幕的额外调整 */
+@media screen and (max-width: 480px) {
+  th:nth-child(6), td:nth-child(6) {
+    display: none;
+  }
+
+  th:nth-child(2), td:nth-child(2) { 
+    width: 80px; 
+    height: 80px;
+  }
+
+  .monke-image, .monke-image-cell {
+    width: 80px;
+    height: 80px;
+  }
+}
+

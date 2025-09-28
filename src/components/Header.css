@@ -1,0 +1,46 @@
+.header-container {
+  width: 100vw;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.animation-viewport {
+  position: absolute;
+  height: 168px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+#animationCanvas {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  width: 100%;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 16px;
+}
+
